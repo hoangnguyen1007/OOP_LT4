@@ -26,4 +26,4 @@ public:
 	CDate operator--();
 	CDate operator--(int);
 };
-
+double tinh_lai_suat(double so_tien_gui, double lai_suat_nam, CDate ngay_gui, CDate ngay_rut);

@@ -1,4 +1,15 @@
 #include "CDate.h"
+double tinh_lai_suat(double so_tien_gui, double lai_suat_nam, CDate ngay_gui, CDate ngay_rut)
+{
+	int so_ngay_gui = ngay_rut - ngay_gui;
+	if (so_ngay_gui < 0)
+	{
+		std::cerr << "Ngay rut phai lon hon ngay gui!" << endl;
+		return 0.0;
+	}
+	double lai = so_tien_gui * (lai_suat_nam / 100) * so_ngay_gui / 365;
+	return lai;
+}
 bool nam_nhuan(int nam)
 {
 	return(nam % 4 == 0 && nam % 100 != 0) || (nam % 400 == 0);
@@ -168,3 +179,4 @@ CDate CDate::operator--(int)
 	--*this;
 	return tmp;
 }
+
